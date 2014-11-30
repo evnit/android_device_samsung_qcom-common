@@ -27,8 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.call_ring.multiple=0 \
-    ro.telephony.ril_class=SamsungQualcommRIL
+    ro.telephony.call_ring.multiple=0
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -40,10 +39,3 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
     setup_fs
-
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
