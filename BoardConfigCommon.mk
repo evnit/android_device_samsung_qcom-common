@@ -13,32 +13,27 @@
 # limitations under the License.
 
 BOARD_VENDOR := samsung
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-
 # Architecture
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
-
+# Charger
+BOARD_CHARGER_RES := device/samsung/qcom-common/charger
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
-
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-
 # Healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
-
 # Qualcomm support
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 BOARD_USES_QCOM_HARDWARE := true
-
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/qcom-common
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
